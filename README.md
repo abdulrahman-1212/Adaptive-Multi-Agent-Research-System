@@ -85,7 +85,24 @@ project/
 - **Workflow**: LangGraph orchestrates the agents in a sequential workflow: `ResearchAgent` → `AnalysisAgent` → `InnovationAgent`.
 - **Storage**: Results are stored in `st.session_state.results`, cleared via the "Clear Results" button.
 - **Error Handling**: Displays errors for Arxiv or Groq API failures and warns if the fallback mechanism is used.
-
+- 
+## Example
+**Input**: Physics Informed Neural Network.
+**Output**:
+   **Research Papers**: 
+      1. Revisiting PINNs: Generative Adversarial Physics-informed Neural Networks and Point-weighting Method.
+      2. From short-sighted to far-sighted: A comparative study of recursive machine learning approaches for open quantum systems.
+      3. Auto-PINN: Understanding and Optimizing Physics-Informed Neural Architecture.
+   **Research Gaps**:
+      1. Lack of comparative studies: Only one paper is conducting a comparative study of recursive machine learning approaches for open quantum systems, indicating a potential gap in the literature for more comprehensive comparisons.
+      2. Optimization and understanding of PINNs: While one paper is focused on understanding and optimizing PINNs, there may be a need for further research in this area to fully unlock the potential of PINNs in scientific applications.
+   **Suggested Research Topics**:
+      1. Comparative Analysis of PINNs and Recursive Machine Learning Approaches for Quantum Many-Body Systems
+      2. Optimization of PINNs for Noisy Quantum Systems: A Bayesian Approach.
+      3. Physics-Constrained Neural Networks for Quantum Information Processing: A Hybrid Approach.
+      4. PINNs for Quantum Error Correction: A Machine Learning Perspective.
+      5. Interpretable PINNs for Quantum Systems: Unveiling Physical Insights.
+      
 ## Notes
 - **Model Choice**: Uses `llama3-70b-8192` via Groq, as `llama2-70b-4096` is not supported. Ensure the Groq API key has access to this model.
 - **Arxiv Limits**: Fetches up to 3 papers with summaries truncated at 50,000 characters. Adjust `top_k_results` or `doc_content_chars_max` in `research_agent.py` if needed.
