@@ -1,5 +1,5 @@
 # Multi-Agent Research System
-
+**Streamlit App**: https://adaptive-multi-agent-research-system-ahkkgufrvkx9ycdacmwmxh.streamlit.app/
 This project is a Streamlit-based web application that implements a Multi-Agent System (MAS) for academic research. It uses LangGraph to orchestrate three agents: `ResearchAgent` for fetching papers from Arxiv, `AnalysisAgent` for analyzing research data, and `InnovationAgent` for suggesting novel research topics. The system leverages the Groq API with the Llama3 model (`llama3-70b-8192`) for inference and stores results in Streamlit's session state, requiring no database.
 
 ## Features
