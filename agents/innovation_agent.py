@@ -16,7 +16,7 @@ class InnovationAgent:
             groq_api_key = st.secrets["groq"]["api_key"]
             self.llm = ChatGroq(
                 model=model_name,
-                api_key=os.getenv("GROK_API_KEY"),
+                api_key=groq_api_key,
                 temperature=temperature
             )
             self.output_parser = StrOutputParser()
