@@ -5,13 +5,15 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
+# load_dotenv()
 
 class InnovationAgent:
     def __init__(self, model_name: str = "llama3-70b-8192", temperature: float = 0.7):
         """Initialize with Groq LLM for topic generation"""
         try:
+            groq_api_key = st.secrets["groq"]["api_key"]
             self.llm = ChatGroq(
                 model=model_name,
                 api_key=os.getenv("GROK_API_KEY"),
