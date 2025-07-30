@@ -3,14 +3,16 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
+# load_dotenv()
 
 class AnalysisAgent:
     def __init__(self, model_name: str = "llama3-70b-8192"):
+        groq_api_key = st.secrets["groq"]["api_key"]
         self.llm = ChatGroq(
             model=model_name,
-            api_key=os.getenv("GROK_API_KEY"),
+            api_key=groq_api_key,
             temperature=0.7
         )
 
