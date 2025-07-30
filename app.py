@@ -3,74 +3,8 @@ import asyncio
 import pandas as pd
 from agents.research_mas import ResearchMAS
 
-# Set page configuration with dark theme (setting for dark mode)
-st.set_page_config(page_title="Multi-Agent Research System", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Multi-Agent Research System", layout="wide")
 
-# Manually set dark background and other UI elements
-st.markdown(
-    """
-    <style>
-    /* Dark background for the entire page */
-    .css-18e3th9 {
-        background-color: #121212;
-        color: white;
-    }
-
-    /* Dark background for the sidebar */
-    .css-1d391kg {
-        background-color: #1E1E1E;
-        color: white;
-    }
-
-    /* Set the color of titles and headers */
-    .css-1v0mbdj, .css-1ka6r26 {
-        color: white !important;
-    }
-
-    /* Set the color of text and input fields */
-    .stTextInput input {
-        background-color: #333333;
-        color: white;
-    }
-    
-    /* Set button color */
-    .stButton>button {
-        background-color: #444444;
-        color: white;
-    }
-
-    /* Set expander background */
-    .stExpanderHeader {
-        background-color: #444444;
-        color: white;
-    }
-
-    /* Set expander content text */
-    .stExpanderContent {
-        color: white;
-    }
-
-    /* Set success and info text color */
-    .stSuccess, .stInfo {
-        color: white;
-    }
-
-    /* Set markdown color */
-    .markdown {
-        color: white;
-    }
-
-    /* Dark background for the dataframe */
-    .stDataFrame {
-        background-color: #333333;
-        color: white;
-    }
-
-    </style>
-    """, unsafe_allow_html=True
-)
-
-# Initialize Multi-Agent System
 mas = ResearchMAS()
 
 if "results" not in st.session_state:
